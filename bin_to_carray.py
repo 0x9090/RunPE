@@ -8,7 +8,7 @@ bytes_per_line = 16
 
 count = 0;
 index = 0;
-output = "unsigned char binary[] = {\n\t"
+output = "unsigned char rawData[] = {\n\t"
 with open(target, "rb") as f:
 	hexdata = binascii.hexlify(f.read())
 hexlist = map(''.join, zip(*[iter(hexdata)]*2))
